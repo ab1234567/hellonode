@@ -12,7 +12,7 @@ public void Kaniko(body) {
             git 'https://github.com/ab1234567/hellonode.git'
             container('Kaniko') {
                 stage('Build a project') {
-                    sh /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure-skip-tls-verify --cache=true        
+                    sh /kaniko/executor -f ./Dockerfile        
                 }
             }
         }
