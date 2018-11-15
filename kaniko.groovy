@@ -1,10 +1,3 @@
-import com.cloudbees.plugins.flow.*;
-import  hudson.plugins.promoted_builds.*;
-import org.jvnet.hudson.plugins.groovypostbuild.*;
-import org.jenkinsci.plugins.scriptsecurity.scripts.*;
-import org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.*;
-import hudson.model.RootAction;
-
 def label = "kaniko-${UUID.randomUUID().toString()}"
 
 podTemplate(name: 'kaniko', label: label, yaml: """
